@@ -6,7 +6,7 @@ import java.util.Set;
 public class SetDemo {
 	public static void main(String args[]){
 		//创建对象
-		Set set = new HashSet<>();
+		Set set = new HashSet<String>();
 		
 		//添加新元素
 		set.add("1");

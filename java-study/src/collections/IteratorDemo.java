@@ -7,7 +7,7 @@ import java.util.Set;
 public class IteratorDemo {
 	public static void main(String args[]) {
 		
-		Set set = new HashSet<>();
+		Set set = new HashSet<String>();
 		
 		//添加新元素
 		set.add("1");

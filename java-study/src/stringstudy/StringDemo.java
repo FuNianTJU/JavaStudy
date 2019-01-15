@@ -1,5 +1,7 @@
 package stringstudy;
 
+import java.io.UnsupportedEncodingException;
+
 public class StringDemo {
 	public static void main(String args[]){
 		//两种赋值方式
@@ -31,5 +33,31 @@ public class StringDemo {
 		String trimString = s2.trim();
 		System.out.println(trimString);
 		
+		//获取二进制编码
+		String strByte = "又是一个愉快的周末！";
+		System.out.println("字符串strByte的二进制编码是：" + strByte.getBytes());
+		try {
+			System.out.println("字符串strByte的二进制编码是：" + strByte.getBytes("utf-8"));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

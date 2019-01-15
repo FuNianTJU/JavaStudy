@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class MapDemo {
 	public static void main(String [] args){
-		Map map = new HashMap<>();
+		Map map = new HashMap<String,String>();
 		map.put("1", "value1");
 		map.put("2", "value2");
 		map.put("3", "value3");

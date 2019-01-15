@@ -1,5 +1,10 @@
 package stringstudy;
 
+/**
+ * 注意区分堆内存中的字符串对象和字符串常量池中的字符串对象
+ * @author yan
+ *
+ */
 public class StringCompare {
 	public static void main(String args[]){
 		String str1 = new String("hello");
