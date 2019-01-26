@@ -1,4 +1,4 @@
-package newthread;
+package executor.newthread;
 
 import java.util.concurrent.*;  
 import java.util.Date;
