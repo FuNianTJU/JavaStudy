@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.FilenameFilter;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
-
 public class DirectoryDemo {
 	//删除一个目录，需要先递归地删除目录下的所有文件和子目录，然后才能删除一个目录
 	public static boolean deleteDir(File dir){
