@@ -1,13 +1,11 @@
 package example.selenium;
 
-import com.yan.selenium.SeleniumDownloader;
-
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;
+import us.codecraft.webmagic.downloader.selenium.SeleniumDownloader;
 import us.codecraft.webmagic.pipeline.FilePipeline;
 import us.codecraft.webmagic.processor.PageProcessor;
-
 
 /**
  * 花瓣网抽取器。<br>
@@ -16,7 +14,7 @@ import us.codecraft.webmagic.processor.PageProcessor;
  * Date: 13-7-26 <br>
  * Time: 下午4:08 <br>
  */
-public class HuabanProcessor implements PageProcessor {
+public class HuabanProcessor2 implements PageProcessor {
 
     private Site site;
 
@@ -40,12 +38,13 @@ public class HuabanProcessor implements PageProcessor {
 
     public static void main(String[] args) {
     	//selenium系统配置，其中的路径写自己config文件的路径,在config文件中配置浏览器驱动信息
-//    	System.setProperty("selenuim_config",
-//    			"D:\\jse-workspace\\WebMagicTest\\Study\\src\\main\\java\\Four\\config.ini");
-        Spider.create(new HuabanProcessor()).thread(5)
+    	System.setProperty("selenuim_config",
+    			"D:/Git/gitFiles/WebMagic_study/webmagic_study01/src/main/resources/config.ini");
+        Spider.create(new HuabanProcessor2())
+        		.thread(1)
                 .addPipeline(new FilePipeline("D:\\webmagic"))
-                .setDownloader(new SeleniumDownloader())
+                .setDownloader(new SeleniumDownloader("D:/ProgramFiles/chromedriver_win32/chromedriver.exe"))
                 .addUrl("http://huaban.com/")
-                .runAsync();
+                .run();
     }
 }
